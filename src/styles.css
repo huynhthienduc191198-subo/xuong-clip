@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-bg: #0c0c0e;
+  --color-elevated: #141416;
+  --color-surface: #1b1b1f;
+  --color-fg: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-subtle: #71717a;
+  --color-border: #2a2a30;
+  --color-accent: #d7dbe3;
+  --color-accent-fg: #0c0c0e;
+  --color-danger: #c45c5c;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+:root {
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --motion-slow: 400ms;
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+    text-wrap: pretty;
+    min-height: 100dvh;
+  }
+  h1, h2, h3 { text-wrap: balance; }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
+}
+
+@layer components {
+  .press {
+    transition-property: scale, background-color, color, opacity;
+    transition-duration: var(--motion-quick);
+    transition-timing-function: ease-out;
+  }
+  .press:active:not(:disabled) { scale: 0.96; }
+  .ratio-story {
+    aspect-ratio: 9 / 16;
+    width: auto;
+    max-width: 100%;
+    height: min(54dvh, 32rem);
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press:active:not(:disabled) { scale: 1; }
+}
