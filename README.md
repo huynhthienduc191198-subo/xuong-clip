@@ -1,19 +1,19 @@
-# Xưởng clip
+# Xưởng
 
-Một câu vào, một bài đăng ra. Dùng cho hai trang:
+App quay clip dọc 9:16 cho hai thương hiệu:
 
-- https://nhudangspa.com
-- https://congtyphatdat.com
+- Như Đăng Spa — nhudangspa.com — Hotline 0862 061 606
+- Công ty Phát Đạt — congtyphatdat.com — Hotline 0366.79.39.39
 
-Người không biết cắt video chọn site, chọn việc, bấm làm. App trả hook, lời thoại, nhịp cảnh và lời đăng. Không có thanh timeline.
+Bản đang chạy cho nhân viên: https://vivid-iris-blue-bold.grok.me
 
-Bài thử đang mở sẵn: giới thiệu phòng Như Đăng, clip đứng 10 giây, không chữ trên hình, không mặt người.
+Repo này là mã nguồn để Lovable làm tiếp. Đọc `LOVABLE.md` trước khi sửa.
 
-## Không làm gì
+## Chạy
 
-- Không làm bản sao CapCut.
-- Không nhét Elah, ComfyUI, MoneyPrinterTurbo vào một app.
-- Không bịa giá, không bịa số suất, không đặt một chuyên gia giả lên hình.
-- Không đồng bộ code sang Lovable. Trang web chỉ nhận file clip và lời đăng.
+```bash
+npm install
+npm run dev
+```
 
-Chi tiết repo nhiều sao và phần đã giữ: `docs/nguon-sao.md`.
+Mở trình duyệt, chọn thương hiệu, thả ảnh thật, bấm Tạo video.
